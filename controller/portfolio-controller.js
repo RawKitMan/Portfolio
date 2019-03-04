@@ -8,11 +8,19 @@ let db = require("../models");
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function (req, res) {
 
+    res.render("about-me");
 
+});
+
+router.get("/projects", function(req, res){
     db.Project.findAll({}).then(function (dbProjects) {
         console.log(dbProjects);
         res.render("portfolio", dbProjects);
     });
+});
+
+router.get("/submission", function(req, res){
+    res.render("submission");
 });
 
 router.post("/api/projects", function (req, res) {
@@ -41,9 +49,9 @@ router.put("/api/projects/:id", function (req, res) {
 router.delete("/api/projects/:id", function (req, res) {
     
 
-    cat.destroy({
+    db.Project.destroy({
         where: {
-            id = req.params.id
+            id: req.params.id
         }
     }).then(function (dbProject) {
         if (dbProject.affectedRows === 0) {

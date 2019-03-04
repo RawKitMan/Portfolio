@@ -1,1 +1,2 @@
-CREATE DATABASE portfolioDB;
+
+CREATE DATABASE projectsDB;
