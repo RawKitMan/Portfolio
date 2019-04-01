@@ -11,19 +11,36 @@ $( document ).ready(function() {
             github_url: $("#github-url").val().trim(),
             project_description: $("#description").val().trim()
         };
-        console.log(projectSubmit);
 
         $.ajax({
             method: "POST",
             data: projectSubmit,
             url: "/api/projects"
         }).then(function(){
+
+            //Clear the form
             $("#image").val("");
             $("#image_description").val("")
             $("#project-name").val("");
             $("#project-url").val("");
             $("#github-url").val("");
             $("#description").val("");
+
+            //Redirect to the portfolio page to see the new project
+            window.location = "/projects"
         })
     });
+
+    //If we want to get rid of the project from the page, click the Delete button. 
+    $(".delete-button").on("click", function(){
+        console.log($(this).attr("button-index"));
+        $.ajax({
+            method: "DELETE",
+            url: "/api/projects/" + $(this).attr("button-index")
+        })
+        .then(function(){
+            //Reload the page
+            location.reload();
+        })
+    })
 });
