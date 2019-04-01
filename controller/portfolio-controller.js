@@ -15,7 +15,8 @@ router.get("/", function (req, res) {
 router.get("/projects", function(req, res){
     db.Project.findAll({}).then(function (dbProjects) {
         console.log(dbProjects);
-        res.render("portfolio", dbProjects);
+        res.render("portfolio", {dbProject: dbProjects})
+        
     });
 });
 
@@ -23,11 +24,22 @@ router.get("/submission", function(req, res){
     res.render("submission");
 });
 
+router.get("/signin", function(req, res){
+    res.render("signin");
+});
+
 router.post("/api/projects", function (req, res) {
     db.Project.create(req.body).then(function (dbProject) {
         // Send back the ID of the new quote
         res.json({ id: dbProject.insertId });
     });
+});
+
+router.get("/api/projects", function(req, res) {
+    db.Project.findAll({})
+    .then(function(dbProjects){
+        res.json(dbProjects);
+    })
 });
 
 router.put("/api/projects/:id", function (req, res) {

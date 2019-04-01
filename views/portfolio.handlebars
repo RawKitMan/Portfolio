@@ -1,12 +1,16 @@
-<div id='content' class='flex-1 mx-auto p-8'>
-    <h1>Sticky Footer Demo</h1>
-    <div class = "mt-5 border-red border-solid border-8 flex">
-        <img src = "" alt = "test image" class = "w-1/2 bg-grey-light h-12">
-        <ul class = "w-1/2 bg-grey-light h-12">
-            <li>Project name: </li>
-            <li>Project URL:<a href="">Herp</a></li>
-            <li>GitHub URL:<a href="">Herp</a></li>
-            <li>Description:</li> 
+
+<div id='content' class='flex-1 mx-auto p-8 container bg-white mb-3'>
+    <h2 class="text-center">My Projects</h2>
+    {{#each dbProject}}
+    <div class="mt-5 border-red border-solid border-8 flex">       
+
+        <img src={{image_link}} alt={{image_description}}>
+        <ul class="w-2/3 bg-grey-light">
+            <li class = "mt-1">Project name: {{project_name}}</li>
+            <li class = "mt-1">Project URL: <a href={{project_url}} target="_blank">{{project_url}}</a></li>
+            <li class = "mt-1">GitHub URL: <a href={{github_url}} target="_blank">{{github_url}}</a></li>
+            <li class = "mt-1 mb-2">Description: {{project_description}}</li>
         </ul>
     </div>
+    {{/each}}
 </div>
