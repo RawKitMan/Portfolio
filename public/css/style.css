@@ -14,6 +14,10 @@ ul{
     transform: rotate(90deg);
 }
 
+.project-image{
+    width: 50%;
+    height: 50%;
+}
 .image-size {
     width: 60%;
     height: 60%;
