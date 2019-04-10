@@ -42,7 +42,7 @@ router.get("/api/projects", function(req, res) {
     })
 });
 
-router.put("/api/projects/:id", function (req, res) {
+/*router.put("/api/projects/:id", function (req, res) {
 
     db.Project.update({
         where: {
@@ -73,7 +73,7 @@ router.delete("/api/projects/:id", function (req, res) {
             res.status(200).end();
         }
     });
-});
+});*/
 
 // Export routes for server.js to use.
 module.exports = router;
