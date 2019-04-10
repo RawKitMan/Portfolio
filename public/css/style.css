@@ -2,8 +2,16 @@ body{
     font-family: 'El Messiri', sans-serif;
 }
 
+.about-me-text{
+    font-size: 20px;
+}
+
 ul{
     list-style: none;
+}
+
+.project-text{
+    font-size: 20px;
 }
 
 .rotateimg90 {
@@ -15,8 +23,8 @@ ul{
 }
 
 .project-image{
-    width: 50%;
-    height: 50%;
+    width: 30%;
+    height: 30%;
 }
 .image-size {
     width: 60%;

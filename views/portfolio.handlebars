@@ -1,16 +1,16 @@
 <div id='content' class='flex-1 mx-auto container bg-white mb-3'>
-    <h2 class="text-center">My Projects</h2>
+    <h2 class="text-center mt-5">My Projects</h2>
     {{#each dbProject}}
     <div class="mt-5 border-red border-solid border-8 bg-grey-light flex all: flex-wrap xs: flex-wrap sm:flex-wrap md:flex-wrap lg:flex-wrap xl:flex-wrap">
 
         <img class="w-1/5 project-image flex  xs:flex-wrap sm:flex-wrap md:flex-wrap" src={{image_link}} alt={{image_description}}>
-        <ul class="w-1/2 flex-none xs:flex-wrap sm:flex-wrap md:flex-wrap lg:flex-wrap">
-            <li class="mt-1">Project name: {{project_name}}</li>
-            <li class="mt-1">Project URL: <a href={{project_url}} target="_blank">{{project_url}}</a></li>
-            <li class="mt-1">GitHub URL: <a href={{github_url}} target="_blank">{{github_url}}</a></li>
-            <li class="mt-1 mb-2">Description: {{project_description}}</li>
+        <ul class="w-2/3 flex-none xs:flex-wrap sm:flex-wrap md:flex-wrap lg:flex-wrap">
+            <li class="mt-3 project-text"><strong>Project name:</strong> {{project_name}}</li>
+            <li class="mt-3 project-text"><strong>Project URL:</strong> <a href={{project_url}} target="_blank">{{project_url}}</a></li>
+            <li class="mt-3 project-text"><strong>GitHub URL:</strong> <a href={{github_url}} target="_blank">{{github_url}}</a></li>
+            <li class="mt-3 mb-2 project-text"><strong>Description:</strong> {{project_description}}</li>
             <li><button
-                    class="bg-red hover:bg-red-light text-white mt-2 font-bold py-2 px-4 border-b-4 border-red-dark hover:border-red rounded delete-button"
+                    class="bg-red hover:bg-red-light text-white mt-3 font-bold py-2 px-4 border-b-4 border-red-dark hover:border-red rounded delete-button"
                     button-index={{id}}>
                     Delete
                 </button></li>
