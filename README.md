@@ -4,7 +4,6 @@ Welcome to my Web Development Portfolio. This site is designed to present to you
 
 - HTML5/CSS
 - Javascript/jQuery
-- Handlebars
 - CSS Frameworks
 - Node.js
 - Express.js
