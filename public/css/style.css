@@ -11,7 +11,7 @@ ul{
 }
 
 .project-text{
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .rotateimg90 {
@@ -27,8 +27,21 @@ ul{
     height: 100%;
 }
 .image-size {
-    width: 50%;
-    height: 50%;
-    margin-bottom: 2em;
-    margin-left: 5em;
+    width: 60%;
+    height: 60%;
+    margin-bottom: 4em;
+    margin-left:8em;
+}
+
+.link:hover{
+    text-decoration: underline;
+}
+
+.name{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.myproject{
+    font-size: 20px;
 }
