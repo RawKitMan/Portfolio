@@ -36,11 +36,13 @@ $( document ).ready(function() {
         console.log($(this).attr("button-index"));
         $.ajax({
             method: "DELETE",
-            url: "/api/projects/" + $(this).attr("button-index")
+            data: $(this).attr("button-index"),
+            url: "/api/projects"
         })
         .then(function(){
+            console.log("Ok");
             //Reload the page
-            location.reload();
+            // location.reload();
         })
     })
 });
