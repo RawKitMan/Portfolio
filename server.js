@@ -23,7 +23,14 @@ app.use(express.static("public"));
 
 //Sets server to pull up Handlebar pages.
 let expresshb = require("express-handlebars");
-app.engine("handlebars", expresshb({ defaultLayout: "main" }));
+const Handlebars = require('handlebars')
+const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
+const insecureHandlebars = allowInsecurePrototypeAccess(Handlebars)
+
+app.engine("handlebars", expresshb({ 
+    defaultLayout: "main",
+    handlebars: insecureHandlebars
+ }));
 app.set("view engine", "handlebars");
 
 // Routes accessed via controller and html route folder

@@ -7,16 +7,17 @@
   "description": "Professional portfolio",
   "main": "server.js",
   "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.5",
     "autoprefixer": "^10.2.5",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.2",
-    "handlebars": "^4.7.7",
     "minimist": "^1.2.5",
     "mysql2": "^2.2.5",
     "postcss": "^8.3.0",
     "sequelize": "^6.6.2"
   },
   "devDependencies": {
+    "handlebars": "^4.7.7",
     "tailwindcss": "^2.1.2"
   },
   "scripts": {
