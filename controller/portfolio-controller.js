@@ -58,22 +58,22 @@ router.get("/api/projects", function(req, res) {
     });
 });
 */
-router.delete("/api/projects", function (req, res) {
-    console.log('body', req.body)
-    await db.Project.destroy({
-        where: {
-            id: req.body
-        }
-    }).then(function (dbProject) {
-        if (dbProject.affectedRows === 0) {
-            // If no rows were changed, then the ID must not exist, so 404
-            return res.status(404).end();
-        } else {
-            console.log(dbProject);
-            res.status(200).end();
-        }
-    });
-});
+// router.delete("/api/projects", function (req, res) {
+//     console.log('body', req.body)
+//     await db.Project.destroy({
+//         where: {
+//             id: req.body
+//         }
+//     }).then(function (dbProject) {
+//         if (dbProject.affectedRows === 0) {
+//             // If no rows were changed, then the ID must not exist, so 404
+//             return res.status(404).end();
+//         } else {
+//             console.log(dbProject);
+//             res.status(200).end();
+//         }
+//     });
+// });
 
 // Export routes for server.js to use.
 module.exports = router;
