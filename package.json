@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "engines": {
-    "node": "15.9.0"
+    "node": "15.x"
   },
   "description": "Professional portfolio",
   "main": "server.js",
