@@ -2,6 +2,10 @@ body{
     font-family: 'El Messiri', sans-serif;
 }
 
+#submission {
+    pointer-events: none;
+}
+
 .about-me-text{
     font-size: 20px;
 }
